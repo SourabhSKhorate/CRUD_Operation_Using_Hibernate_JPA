@@ -10,10 +10,9 @@ import javax.persistence.Query;
 public class TestGetAll {
 
 	public static void main(String[] args) {
-		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("sk");// connection
-		EntityManager entityManager = entityManagerFactory.createEntityManager();// create CRUD statement // update in
-																					// database
-
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("sk");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+																					
 		String sql = "SELECT e FROM Employee e";
 		Query query = entityManager.createQuery(sql);
 
